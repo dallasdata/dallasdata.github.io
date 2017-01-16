@@ -69,35 +69,78 @@
 
       <div class="starter-template">
         <h1>Crime</h1>
-        <p class="lead">Crimes reported to the Dallas Police Department.</p>
+        <p class="lead">
+            All crimes reported to the Dallas Police Department since 2001.
+        </p>
+
+        <p>
+            This data is compiled from data obtained via the
+            <a href="http://www.dallaspolice.net/">Dallas Police Department</a>
+            website (for all data prior to June, 2014) and the <a
+            href="https://www.dallasopendata.com/">Dallas Open Data Portal</a>
+            (for all data since June, 2014). Data prior to June, 2014 has a
+            number of consistency issues which we are attempting to clean up,
+            but in the meantime it's provided as-is.
+        </p>
 
         <h2>Get the data</h2>
         <p>
-            The data is available as a large CSV download
-            <a href="http://dallas-data.s3.amazonaws.com/data.csv">here</a>, which
-            contains all crimes since June 1, 2014.
+            The data is available as downloadable CSV files, with one file per
+            year, named by year. They are all available under the
+            <tt>http://dallas-data.s3.amazonaws.com/crime/</tt> URL hierarchy.
+            For example, <a
+                href="http://dallas-data.s3.amazonaws.com/crime/2001.csv">
+            <tt>/crime/2001.csv</tt></a> contains all crimes begun in the year
+            2001.
         </p>
 
         <p>
             For each crime, the following fields are defined:
             <dl class="dl-horizontal">
-                <dt>start_date</dt>
-                <dd>Date (in <tt>YYYY-MM-DD</tt> format) that the crime began.</dd>
+                <dt>start_date_year</dt>
+                <dd>Year that the crime began.</dd>
 
-                <dt>start_time</dt>
-                <dd>Time (in <tt>HH:MM</tt> 24-hour format) that the crime began.</dd>
+                <dt>start_date_month</dt>
+                <dd>Month that the crime began, starting from 1 (January).</dd>
 
-                <dt>end_date</dt>
-                <dd>Date (in <tt>YYYY-MM-DD</tt> format) that the crime ended.</dd>
+                <dt>start_date_day</dt>
+                <dd>Day of the month that the crime began, starting from 1.</dd>
 
-                <dt>end_time</dt>
-                <dd>Time (in <tt>HH:MM</tt> 24-hour format) that the crime ended.</dd>
+                <dt>start_time_hour</dt>
+                <dd>Hour that the crime began, starting from 0.</dd>
 
-                <dt>report_date</dt>
-                <dd>Date (in <tt>YYYY-MM-DD</tt> format) on which the crime was reported.</dd>
+                <dt>start_time_min</dt>
+                <dd>Minute that the crime began, starting from 0.</dd>
 
-                <dt>report_time</dt>
-                <dd>Time (in <tt>HH:MM</tt> 24-hour format) at which the crime was reported.</dd>
+                <dt>end_date_year</dt>
+                <dd>Year that the crime ended.</dd>
+
+                <dt>end_date_month</dt>
+                <dd>Month that the crime ended, starting from 1 (January).</dd>
+
+                <dt>end_date_day</dt>
+                <dd>Day of the month that the crime ended, starting from 1.</dd>
+
+                <dt>end_time_hour</dt>
+                <dd>Hour that the crime ended, starting from 0.</dd>
+
+                <dt>end_time_min</dt>
+                <dd>Minute that the crime ended, starting from 0.</dd>
+
+                <dt>report_date_year</dt>
+                <dd>Year that the crime was reported.</dd>
+
+                <dt>report_date_month</dt>
+                <dd>Month that the crime was reported, starting from 1 (January).</dd>
+
+                <dt>report_date_day</dt>
+                <dd>Day of the month that the crime was reported, starting from 1.</dd>
+
+                <dt>report_time_hour</dt>
+                <dd>Hour that the crime was reported, starting from 0.</dd>
+
+                <dt>report_time_min</dt>
+                <dd>Minute that the crime was reported, starting from 0.</dd>
 
                 <dt>street_number</dt>
                 <dd>Numerical street number for the location at which the crime occurred.</dd>
